@@ -52,6 +52,10 @@
 #include <ctype.h>
 #include <sys/sysinfo.h>
 
+#ifndef FNM_EXTMATCH /* glibc extension */
+	#define FNM_EXTMATCH 0
+#endif
+
 #ifndef linux
 #include <sys/sysctl.h>
 #endif
