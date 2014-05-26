@@ -2691,6 +2691,7 @@ void initialise_threads(int fragment_buffer_size, int data_buffer_size, int cat_
 		sigemptyset(&sigmask);
 		sigaddset(&sigmask, SIGQUIT);
 		sigaddset(&sigmask, SIGHUP);
+		sigaddset(&sigmask, SIGALRM);
 		if(pthread_sigmask(SIG_BLOCK, &sigmask, NULL) != 0)
 			EXIT_UNSQUASH("Failed to set signal mask in initialise_threads\n");
 
