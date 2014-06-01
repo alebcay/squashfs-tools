@@ -22,6 +22,8 @@
  * xattr.c
  */
 
+#include "endian_compat.h"
+
 #define TRUE 1
 #define FALSE 0
 
